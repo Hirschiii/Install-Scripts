@@ -5,8 +5,33 @@ Change what you need spacely the name and passwd for root and you.
 
 ---
 
-# Arch Base install will do:
+## Arch Base install will do:
 
+What you have to do first:
+
+1. Partition the Disk (in my case with fdisk)
+> fdisk /dev/...
+> g 
+> Partition One: +256M t 1
+> Partition Two: root 
+2. Make the filesystems
+> mkfs.vfat /dev/...1
+> mkfs.ext4 /dev/...2
+3. Mount the Partitions
+> mount /dev/...2 /mnt
+> mkdir -p /mnt/boot/efi
+> mount /dev/...1 /mnt/boot/efi
+4. Then do the really base install
+> pacstrap /mnt base linux linux-firmware git vim intel-ucode
+5. Generate FSTAB
+> genfstab -U /mnt >> /mnt/etc/fstab
+6. ChRoot
+> arch-chroot /mnt
+7. OPTIONAL: Swapfile
+8. Run the install script:
+
+### This is everething the base install script will do:
+---
 - Set everything to german
 - set the time
 - set the host/-name
@@ -18,6 +43,7 @@ Change what you need spacely the name and passwd for root and you.
 - install grub
 - enable everything
 - and add my user and waht I need (set passwd, edit visudo, ...)
+---
 
 
 
