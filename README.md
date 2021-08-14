@@ -1,5 +1,5 @@
 # Install-Scripts
-My scripts to easy install my base 
+My scripts, to easy install my base 
 This README file is just for me to remember the installation 
 
 Change what you need spacely the name and passwd for root and you.
@@ -45,6 +45,20 @@ What you have to do first:
 - enable everything
 - and add my user and waht I need (set passwd, edit visudo, ...)
 ---
+
+# The i3 setup script:
+
+Just run the script. It will do:
+
+- get latest pacman mirrors
+- setup firewalld
+- install some things (:
+> xorg lightdm firefox i3 i3-gaps picom rofi dmenu vlc libreoffice lightdm-gtk-greeter 
+- and finish.
+
+After thet I install yay and with it:
+> auto-cpufreq optimus-manager optimus-manager-qt
+and thet set up thes two.
 
 
 
