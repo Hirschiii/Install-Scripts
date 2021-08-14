@@ -1,5 +1,6 @@
 # Install-Scripts
 My scripts to easy install my base 
+This README file is just for me to remember the installation 
 
 Change what you need spacely the name and passwd for root and you.
 
